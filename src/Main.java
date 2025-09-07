@@ -12,7 +12,7 @@ public class Main {
         print(rec.recursive(5));
 
         //palindrom
-        print(rec.isPalindrome(1001));
+        print(rec.isPolindrom(100101));
 
         // even or odd
         rec.printEven(10);

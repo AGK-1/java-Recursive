@@ -5,6 +5,7 @@ public class Rec {
         System.out.println(obj);
     }
 
+
     /// Recursive faktorial
     public int recursive(int number) {
         if (number <= 0) return 1;
@@ -12,16 +13,19 @@ public class Rec {
     }
 
 
-
     ///  Polindrom
-    public boolean isPalindrome(int numb) {
+    public boolean isPolindrom(int numb) {
+        return isPolindrom(String.valueOf(numb));
+    }
 
-        String in = String.valueOf(numb);
-        if (in.length() < 2) return true;
-        if (in.charAt(0) == in.charAt(in.length() - 1))
-            return isPalindrome(Integer.parseInt(in.substring(1, in.length() - 1)));
-        else
-            return false;
+    public boolean isPolindrom(String str) {
+        if (str.length() == 0 || str.length() == 1) {
+            return true;
+        }
+        if (str.charAt(0) == str.charAt(str.length() - 1)) {
+            return isPolindrom(str.substring(1, str.length() - 1));
+        }
+        return false;
     }
 
     ///  Even numbers
